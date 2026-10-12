@@ -22,6 +22,8 @@ function getBigOrders(orders, min){
     return orders.filter(order => order.total >= min);
 }
 console.log("Totals who are greater or equal then 8 (minimum):",getBigOrders(orders,8));
+console.log("Totals who are greater or equal then 5 (minimum):",getBigOrders(orders,5));
+console.log("Totals who are greater or equal then 10 (minimum):",getBigOrders(orders,10));
 
 
 //returns an array summarizing the strings per order in a given format
@@ -44,6 +46,8 @@ function findOrdersByItem(orders, item){
     return orders.filter(order => order.items.includes(item)).map(order => order.id);
 }
 console.log("Order With Specific Item (muffin):",findOrdersByItem(orders, "muffin"));
+console.log("Order With Specific Item (latte):",findOrdersByItem(orders, "latte"));
+console.log("Order With Specific Item (croissant):",findOrdersByItem(orders, "croissant"));
 
 
 //returns how many items each item was ordered in an object
