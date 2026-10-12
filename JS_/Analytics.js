@@ -28,12 +28,12 @@ console.log("Totals who are greater or equal then 10 (minimum):",getBigOrders(or
 
 //returns an array summarizing the strings per order in a given format
 function getOrderSummaries(orders){
-    return orders.map(order => `#${order.id} ${order.customer} - ${order.items.length} items(s) - $${order.total.toFixed(2)}`);
+    return orders.map(order => `#${order.id} ${order.customer} - ${order.items.length} item(s) - $${order.total.toFixed(2)}`);
 }
 console.log("Order Summaries:",getOrderSummaries(orders));
 
 
-//returns a new array sorted lowest to highest according to their total, without altering the original array
+//returns a new array sorted highest to lowest according to their total, without altering the original array
 function getSortedByTotal(orders){
     return [...orders].sort((a,b) => b.total - a.total);
 }
